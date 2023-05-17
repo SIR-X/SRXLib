@@ -77,11 +77,9 @@ async def post(url: str, data: dict = {}, json: dict = {}, headers: dict = {}, f
 async def request(method: Literal["post", "get"] = "post", *args, **kwargs):
     match method:
         case "post":
-            request = await asyncio.gather(post(*args, **kwargs))
-            return loads(request[0])
+            return loads(await post(*args, **kwargs))
 
         case "get":
-            request = await asyncio.gather(get(*args, **kwargs))
-            return loads(request[0])
+            return loads(await get(*args, **kwargs))
 
-    raise ValueError(f"There is no method named {method}")
+    raise ValueError(f"There is no method named \"{method}\"")
