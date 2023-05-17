@@ -35,19 +35,3 @@ class Bot(FastAPI, Methods):
                     return await func(self, update["callback_query"])
             return wrapper
         return decorator
-
-app = Bot()
-
-@app.on_message()
-async def OnMessage(client: Bot, update: dict):
-    await client.send_message(1844840402, text="OnMessage Called !")
-    await client.send_message(1844840402, text=f"OnMessage Update: {update}")
-
-
-# @app.post("/webhook")
-# async def on_update(request: Request):
-#     update = await json_to_dict(request)
-
-#     print(
-#         await app.send_message(update["message"]["from"]["id"], text="hihi")
-#     )
