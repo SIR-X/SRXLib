@@ -1,0 +1,5 @@
+pycurl
+orjson
+asyncio
+fastapi
+python-dotenv
