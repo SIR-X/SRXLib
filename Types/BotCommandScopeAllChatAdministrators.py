@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class BotCommandScopeAllChatAdministrators(TelegramType):
+class BotCommandScopeAllChatAdministrators(TelegramObject):
     """
     Represents the scope of bot commands, covering all group and supergroup chat administrators.
 
@@ -9,7 +9,7 @@ class BotCommandScopeAllChatAdministrators(TelegramType):
         type (str): Scope type, must be all_chat_administrators.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
     ):
         self.update(locals())

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PreCheckoutQuery(TelegramType):
+class PreCheckoutQuery(TelegramObject):
     """
     This object contains information about an incoming pre-checkout query.
     
@@ -10,7 +10,7 @@ class PreCheckoutQuery(TelegramType):
     Args:
         id (str): Unique query identifier.
 
-        _from ("Types.User"): User who sent the query.
+        _from (User): User who sent the query.
 
         currency (str): Three-letter ISO 4217 currency code.
 
@@ -20,10 +20,10 @@ class PreCheckoutQuery(TelegramType):
 
         shipping_option_id (str): Optional. Identifier of the shipping option chosen by the user.
 
-        order_info ("Types.OrderInfo"): Optional. Order information provided by the user.
+        order_info (OrderInfo): Optional. Order information provided by the user.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         id : str = None,
         _from : "Types.User" = None,
         currency : str = None,

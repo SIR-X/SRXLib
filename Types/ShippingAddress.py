@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ShippingAddress(TelegramType):
+class ShippingAddress(TelegramObject):
     """
     This object represents a shipping address.
 
@@ -19,7 +19,7 @@ class ShippingAddress(TelegramType):
         post_code (str): Address post code.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         country_code : str = None,
         state : str = None,
         city : str = None,

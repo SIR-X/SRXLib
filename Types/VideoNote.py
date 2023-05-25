@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class VideoNote(TelegramType):
+class VideoNote(TelegramObject):
     """
     This object represents a video message (available in Telegram apps as of v.4.0).
 
@@ -14,12 +14,12 @@ class VideoNote(TelegramType):
 
         duration (int): Duration of the video in seconds as defined by sender.
 
-        thumbnail ("Types.PhotoSize"): Optional. Video thumbnail.
+        thumbnail (PhotoSize): Optional. Video thumbnail.
 
         file_size (int): Optional. File size in bytes.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         length : int = None,

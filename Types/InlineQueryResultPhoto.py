@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultPhoto(TelegramType):
+class InlineQueryResultPhoto(TelegramObject):
     """
     Represents a link to a photo. By default, this photo will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the photo.
 
@@ -26,14 +26,14 @@ class InlineQueryResultPhoto(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the photo caption. See formatting options for more details..
 
-        caption_entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
+        caption_entities (list[MessageEntity]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the photo.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the photo.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         photo_url : str = None,

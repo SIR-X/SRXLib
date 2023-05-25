@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Poll(TelegramType):
+class Poll(TelegramObject):
     """
     This object contains information about a poll.
 
@@ -10,7 +10,7 @@ class Poll(TelegramType):
 
         question (str): Poll question, 1-300 characters.
 
-        options (list["Types.PollOption"]): List of poll options.
+        options (list[PollOption]): List of poll options.
 
         total_voter_count (int): Total number of users that voted in the poll.
 
@@ -26,14 +26,14 @@ class Poll(TelegramType):
 
         explanation (str): Optional. Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style poll, 0-200 characters.
 
-        explanation_entities (list["Types.MessageEntity"]): Optional. Special entities like usernames, URLs, bot commands, etc. that appear in the explanation.
+        explanation_entities (list[MessageEntity]): Optional. Special entities like usernames, URLs, bot commands, etc. that appear in the explanation.
 
         open_period (int): Optional. Amount of time in seconds the poll will be active after creation.
 
         close_date (int): Optional. Point in time (Unix timestamp) when the poll will be automatically closed.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         id : str = None,
         question : str = None,
         options : list["Types.PollOption"] = None,

@@ -20,7 +20,7 @@ class setChatPermissions:
         """
 
         return await Curl.request(
-            url=api + "setChatPermissions",
+            url=self.api + "setChatPermissions",
             json={
                 "chat_id": chat_id,
                 "permissions": permissions,

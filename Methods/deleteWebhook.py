@@ -14,7 +14,7 @@ class deleteWebhook:
         """
 
         return await Curl.request(
-            url=api + "deleteWebhook",
+            url=self.api + "deleteWebhook",
             json={
                 "drop_pending_updates": drop_pending_updates,
             }

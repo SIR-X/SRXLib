@@ -14,7 +14,7 @@ class hideGeneralForumTopic:
         """
 
         return await Curl.request(
-            url=api + "hideGeneralForumTopic",
+            url=self.api + "hideGeneralForumTopic",
             json={
                 "chat_id": chat_id,
             }

@@ -17,7 +17,7 @@ class getMyCommands:
         """
 
         return await Curl.request(
-            url=api + "getMyCommands",
+            url=self.api + "getMyCommands",
             json={
                 "scope": scope,
                 "language_code": language_code,

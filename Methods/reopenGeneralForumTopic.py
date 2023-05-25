@@ -14,7 +14,7 @@ class reopenGeneralForumTopic:
         """
 
         return await Curl.request(
-            url=api + "reopenGeneralForumTopic",
+            url=self.api + "reopenGeneralForumTopic",
             json={
                 "chat_id": chat_id,
             }

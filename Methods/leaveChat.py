@@ -14,7 +14,7 @@ class leaveChat:
         """
 
         return await Curl.request(
-            url=api + "leaveChat",
+            url=self.api + "leaveChat",
             json={
                 "chat_id": chat_id,
             }

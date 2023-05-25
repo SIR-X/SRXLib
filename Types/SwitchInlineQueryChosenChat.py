@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class SwitchInlineQueryChosenChat(TelegramType):
+class SwitchInlineQueryChosenChat(TelegramObject):
     """
     This object represents an inline button that switches the current user to inline mode in a chosen chat, with an optional default inline query.
 
@@ -17,7 +17,7 @@ class SwitchInlineQueryChosenChat(TelegramType):
         allow_channel_chats (bool): Optional. True, if channel chats can be chosen.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         query : str = None,
         allow_user_chats : bool = None,
         allow_bot_chats : bool = None,

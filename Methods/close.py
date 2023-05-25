@@ -14,7 +14,7 @@ class close:
         """
 
         return await Curl.request(
-            url=api + "close",
+            url=self.api + "close",
             json={
                 
             }

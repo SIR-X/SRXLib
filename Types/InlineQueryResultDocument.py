@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultDocument(TelegramType):
+class InlineQueryResultDocument(TelegramObject):
     """
     Represents a link to a file. By default, this file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the file. Currently, only .PDF and .ZIP files can be sent using this method.
     
@@ -18,7 +18,7 @@ class InlineQueryResultDocument(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the document caption. See formatting options for more details..
 
-        caption_entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
+        caption_entities (list[MessageEntity]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
 
         document_url (str): A valid URL for the file.
 
@@ -26,9 +26,9 @@ class InlineQueryResultDocument(TelegramType):
 
         description (str): Optional. Short description of the result.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the file.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the file.
 
         thumbnail_url (str): Optional. URL of the thumbnail (JPEG only) for the file.
 
@@ -37,7 +37,7 @@ class InlineQueryResultDocument(TelegramType):
         thumbnail_height (int): Optional. Thumbnail height.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         title : str = None,

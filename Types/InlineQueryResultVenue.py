@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultVenue(TelegramType):
+class InlineQueryResultVenue(TelegramObject):
     """
     Represents a venue. By default, the venue will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the venue.
     
@@ -28,9 +28,9 @@ class InlineQueryResultVenue(TelegramType):
 
         google_place_type (str): Optional. Google Places type of the venue. (See supported types.).
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the venue.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the venue.
 
         thumbnail_url (str): Optional. Url of the thumbnail for the result.
 
@@ -39,7 +39,7 @@ class InlineQueryResultVenue(TelegramType):
         thumbnail_height (int): Optional. Thumbnail height.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         latitude : float = None,

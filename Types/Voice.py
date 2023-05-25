@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Voice(TelegramType):
+class Voice(TelegramObject):
     """
     This object represents a voice note.
 
@@ -17,7 +17,7 @@ class Voice(TelegramType):
         file_size (int): Optional. File size in bytes. It can be bigger than 2^31 and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a signed 64-bit integer or double-precision float type are safe for storing this value..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         duration : int = None,

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MenuButtonDefault(TelegramType):
+class MenuButtonDefault(TelegramObject):
     """
     Describes that no specific value for the menu button was set.
 
@@ -9,7 +9,7 @@ class MenuButtonDefault(TelegramType):
         type (str): Type of the button, must be default.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
     ):
         self.update(locals())

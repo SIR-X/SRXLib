@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class GeneralForumTopicUnhidden(TelegramType):
+class GeneralForumTopicUnhidden(TelegramObject):
     """
     This object represents a service message about General forum topic unhidden in the chat. Currently holds no information.
 
@@ -9,7 +9,7 @@ class GeneralForumTopicUnhidden(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

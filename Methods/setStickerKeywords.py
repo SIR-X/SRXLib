@@ -17,7 +17,7 @@ class setStickerKeywords:
         """
 
         return await Curl.request(
-            url=api + "setStickerKeywords",
+            url=self.api + "setStickerKeywords",
             json={
                 "sticker": sticker,
                 "keywords": keywords,

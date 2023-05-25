@@ -26,7 +26,7 @@ class restrictChatMember:
         """
 
         return await Curl.request(
-            url=api + "restrictChatMember",
+            url=self.api + "restrictChatMember",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

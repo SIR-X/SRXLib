@@ -1,14 +1,14 @@
 from .utils import *
 import Types
 
-class ChatMemberAdministrator(TelegramType):
+class ChatMemberAdministrator(TelegramObject):
     """
     Represents a chat member that has some additional privileges.
 
     Args:
         status (str): The member's status in the chat, always “administrator”.
 
-        user ("Types.User"): Information about the user.
+        user (User): Information about the user.
 
         can_be_edited (bool): True, if the bot is allowed to edit administrator privileges of that user.
 
@@ -39,7 +39,7 @@ class ChatMemberAdministrator(TelegramType):
         custom_title (str): Optional. Custom title for this user.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         status : str = None,
         user : "Types.User" = None,
         can_be_edited : bool = None,

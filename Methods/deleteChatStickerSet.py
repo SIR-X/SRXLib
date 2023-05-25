@@ -14,7 +14,7 @@ class deleteChatStickerSet:
         """
 
         return await Curl.request(
-            url=api + "deleteChatStickerSet",
+            url=self.api + "deleteChatStickerSet",
             json={
                 "chat_id": chat_id,
             }

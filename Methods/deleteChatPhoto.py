@@ -14,7 +14,7 @@ class deleteChatPhoto:
         """
 
         return await Curl.request(
-            url=api + "deleteChatPhoto",
+            url=self.api + "deleteChatPhoto",
             json={
                 "chat_id": chat_id,
             }

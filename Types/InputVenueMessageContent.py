@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputVenueMessageContent(TelegramType):
+class InputVenueMessageContent(TelegramObject):
     """
     Represents the content of a venue message to be sent as the result of an inline query.
 
@@ -23,7 +23,7 @@ class InputVenueMessageContent(TelegramType):
         google_place_type (str): Optional. Google Places type of the venue. (See supported types.).
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         latitude : float = None,
         longitude : float = None,
         title : str = None,

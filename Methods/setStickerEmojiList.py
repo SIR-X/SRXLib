@@ -17,7 +17,7 @@ class setStickerEmojiList:
         """
 
         return await Curl.request(
-            url=api + "setStickerEmojiList",
+            url=self.api + "setStickerEmojiList",
             json={
                 "sticker": sticker,
                 "emoji_list": emoji_list,

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportElementErrorTranslationFiles(TelegramType):
+class PassportElementErrorTranslationFiles(TelegramObject):
     """
     Represents an issue with the translated version of a document. The error is considered resolved when a file with the document translation change.
 
@@ -15,7 +15,7 @@ class PassportElementErrorTranslationFiles(TelegramType):
         message (str): Error message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         source : str = None,
         type : str = None,
         file_hashes : list[str] = None,

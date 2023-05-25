@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultContact(TelegramType):
+class InlineQueryResultContact(TelegramObject):
     """
     Represents a contact with a phone number. By default, this contact will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the contact.
     
@@ -20,9 +20,9 @@ class InlineQueryResultContact(TelegramType):
 
         vcard (str): Optional. Additional data about the contact in the form of a vCard, 0-2048 bytes.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the contact.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the contact.
 
         thumbnail_url (str): Optional. Url of the thumbnail for the result.
 
@@ -31,7 +31,7 @@ class InlineQueryResultContact(TelegramType):
         thumbnail_height (int): Optional. Thumbnail height.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         phone_number : str = None,

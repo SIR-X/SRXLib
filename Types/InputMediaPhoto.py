@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputMediaPhoto(TelegramType):
+class InputMediaPhoto(TelegramObject):
     """
     Represents a photo to be sent.
 
@@ -14,12 +14,12 @@ class InputMediaPhoto(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the photo caption. See formatting options for more details..
 
-        caption_entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
+        caption_entities (list[MessageEntity]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
 
         has_spoiler (bool): Optional. Pass True if the photo needs to be covered with a spoiler animation.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         media : str = None,
         caption : str = None,

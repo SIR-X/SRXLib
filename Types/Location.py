@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Location(TelegramType):
+class Location(TelegramObject):
     """
     This object represents a point on the map.
 
@@ -19,7 +19,7 @@ class Location(TelegramType):
         proximity_alert_radius (int): Optional. The maximum distance for proximity alerts about approaching another chat member, in meters. For sent live locations only..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         longitude : float = None,
         latitude : float = None,
         horizontal_accuracy : float = None,

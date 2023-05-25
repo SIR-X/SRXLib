@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ChatPermissions(TelegramType):
+class ChatPermissions(TelegramObject):
     """
     Describes actions that a non-administrator user is allowed to take in a chat.
 
@@ -35,7 +35,7 @@ class ChatPermissions(TelegramType):
         can_manage_topics (bool): Optional. True, if the user is allowed to create forum topics. If omitted defaults to the value of can_pin_messages.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         can_send_messages : bool = None,
         can_send_audios : bool = None,
         can_send_documents : bool = None,

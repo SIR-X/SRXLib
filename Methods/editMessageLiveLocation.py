@@ -38,7 +38,7 @@ class editMessageLiveLocation:
         """
 
         return await Curl.request(
-            url=api + "editMessageLiveLocation",
+            url=self.api + "editMessageLiveLocation",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

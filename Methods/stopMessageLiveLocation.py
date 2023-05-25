@@ -23,7 +23,7 @@ class stopMessageLiveLocation:
         """
 
         return await Curl.request(
-            url=api + "stopMessageLiveLocation",
+            url=self.api + "stopMessageLiveLocation",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

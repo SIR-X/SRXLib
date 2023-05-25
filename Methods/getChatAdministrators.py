@@ -14,7 +14,7 @@ class getChatAdministrators:
         """
 
         return await Curl.request(
-            url=api + "getChatAdministrators",
+            url=self.api + "getChatAdministrators",
             json={
                 "chat_id": chat_id,
             }

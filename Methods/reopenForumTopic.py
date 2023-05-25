@@ -17,7 +17,7 @@ class reopenForumTopic:
         """
 
         return await Curl.request(
-            url=api + "reopenForumTopic",
+            url=self.api + "reopenForumTopic",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

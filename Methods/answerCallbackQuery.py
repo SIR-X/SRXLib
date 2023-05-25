@@ -26,7 +26,7 @@ class answerCallbackQuery:
         """
 
         return await Curl.request(
-            url=api + "answerCallbackQuery",
+            url=self.api + "answerCallbackQuery",
             json={
                 "callback_query_id": callback_query_id,
                 "text": text,

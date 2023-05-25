@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportElementErrorReverseSide(TelegramType):
+class PassportElementErrorReverseSide(TelegramObject):
     """
     Represents an issue with the reverse side of a document. The error is considered resolved when the file with reverse side of the document changes.
 
@@ -15,7 +15,7 @@ class PassportElementErrorReverseSide(TelegramType):
         message (str): Error message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         source : str = None,
         type : str = None,
         file_hash : str = None,

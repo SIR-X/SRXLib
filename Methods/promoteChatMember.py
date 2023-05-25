@@ -53,7 +53,7 @@ class promoteChatMember:
         """
 
         return await Curl.request(
-            url=api + "promoteChatMember",
+            url=self.api + "promoteChatMember",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

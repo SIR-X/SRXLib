@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class WebAppData(TelegramType):
+class WebAppData(TelegramObject):
     """
     Describes data sent from a Web App to the bot.
 
@@ -11,7 +11,7 @@ class WebAppData(TelegramType):
         button_text (str): Text of the web_app keyboard button from which the Web App was opened. Be aware that a bad client can send arbitrary data in this field..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         data : str = None,
         button_text : str = None,
     ):

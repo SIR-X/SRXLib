@@ -17,7 +17,7 @@ class getChatMember:
         """
 
         return await Curl.request(
-            url=api + "getChatMember",
+            url=self.api + "getChatMember",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

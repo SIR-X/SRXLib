@@ -23,7 +23,7 @@ class getGameHighScores:
         """
 
         return await Curl.request(
-            url=api + "getGameHighScores",
+            url=self.api + "getGameHighScores",
             json={
                 "user_id": user_id,
                 "chat_id": chat_id,

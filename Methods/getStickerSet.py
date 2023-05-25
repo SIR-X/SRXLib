@@ -14,7 +14,7 @@ class getStickerSet:
         """
 
         return await Curl.request(
-            url=api + "getStickerSet",
+            url=self.api + "getStickerSet",
             json={
                 "name": name,
             }

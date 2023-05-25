@@ -21,7 +21,7 @@ class setMyCommands:
         """
 
         return await Curl.request(
-            url=api + "setMyCommands",
+            url=self.api + "setMyCommands",
             json={
                 "commands": commands,
                 "scope": scope,

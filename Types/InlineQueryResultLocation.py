@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultLocation(TelegramType):
+class InlineQueryResultLocation(TelegramObject):
     """
     Represents a location on a map. By default, the location will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the location.
     
@@ -26,9 +26,9 @@ class InlineQueryResultLocation(TelegramType):
 
         proximity_alert_radius (int): Optional. For live locations, a maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified..
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the location.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the location.
 
         thumbnail_url (str): Optional. Url of the thumbnail for the result.
 
@@ -37,7 +37,7 @@ class InlineQueryResultLocation(TelegramType):
         thumbnail_height (int): Optional. Thumbnail height.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         latitude : float = None,

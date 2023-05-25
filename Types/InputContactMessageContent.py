@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputContactMessageContent(TelegramType):
+class InputContactMessageContent(TelegramObject):
     """
     Represents the content of a contact message to be sent as the result of an inline query.
 
@@ -15,7 +15,7 @@ class InputContactMessageContent(TelegramType):
         vcard (str): Optional. Additional data about the contact in the form of a vCard, 0-2048 bytes.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         phone_number : str = None,
         first_name : str = None,
         last_name : str = None,

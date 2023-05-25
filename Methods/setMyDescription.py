@@ -17,7 +17,7 @@ class setMyDescription:
         """
 
         return await Curl.request(
-            url=api + "setMyDescription",
+            url=self.api + "setMyDescription",
             json={
                 "description": description,
                 "language_code": language_code,

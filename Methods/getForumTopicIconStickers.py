@@ -14,7 +14,7 @@ class getForumTopicIconStickers:
         """
 
         return await Curl.request(
-            url=api + "getForumTopicIconStickers",
+            url=self.api + "getForumTopicIconStickers",
             json={
                 
             }

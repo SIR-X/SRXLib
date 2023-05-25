@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ChatMember(TelegramType):
+class ChatMember(TelegramObject):
     """
     This object contains information about one member of a chat. Currently, the following 6 types of chat members are supported:
 
@@ -9,7 +9,7 @@ class ChatMember(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

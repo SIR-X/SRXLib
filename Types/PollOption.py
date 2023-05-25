@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PollOption(TelegramType):
+class PollOption(TelegramObject):
     """
     This object contains information about one answer option in a poll.
 
@@ -11,7 +11,7 @@ class PollOption(TelegramType):
         voter_count (int): Number of users that voted for this option.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         text : str = None,
         voter_count : int = None,
     ):

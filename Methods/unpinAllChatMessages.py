@@ -14,7 +14,7 @@ class unpinAllChatMessages:
         """
 
         return await Curl.request(
-            url=api + "unpinAllChatMessages",
+            url=self.api + "unpinAllChatMessages",
             json={
                 "chat_id": chat_id,
             }

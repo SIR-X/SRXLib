@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class File(TelegramType):
+class File(TelegramObject):
     """
     This object represents a file ready to be downloaded. The file can be downloaded via the link https://api.tlgr.org/file/bot<token>/<file_path>. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling getFile.
 
@@ -15,7 +15,7 @@ class File(TelegramType):
         file_path (str): Optional. File path. Use https://api.tlgr.org/file/bot<token>/<file_path> to get the file..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         file_size : int = None,

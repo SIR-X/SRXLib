@@ -20,7 +20,7 @@ class stopPoll:
         """
 
         return await Curl.request(
-            url=api + "stopPoll",
+            url=self.api + "stopPoll",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

@@ -23,7 +23,7 @@ class createForumTopic:
         """
 
         return await Curl.request(
-            url=api + "createForumTopic",
+            url=self.api + "createForumTopic",
             json={
                 "chat_id": chat_id,
                 "name": name,

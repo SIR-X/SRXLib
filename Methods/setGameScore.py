@@ -32,7 +32,7 @@ class setGameScore:
         """
 
         return await Curl.request(
-            url=api + "setGameScore",
+            url=self.api + "setGameScore",
             json={
                 "user_id": user_id,
                 "score": score,

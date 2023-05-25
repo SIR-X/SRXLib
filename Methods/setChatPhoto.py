@@ -17,7 +17,7 @@ class setChatPhoto:
         """
 
         return await Curl.request(
-            url=api + "setChatPhoto",
+            url=self.api + "setChatPhoto",
             json={
                 "chat_id": chat_id,
                 "photo": photo,

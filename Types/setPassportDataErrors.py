@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class setPassportDataErrors(TelegramType):
+class setPassportDataErrors(TelegramObject):
     """
     Informs a user that some of the Telegram Passport elements they provided contains errors. The user will not be able to re-submit their Passport to you until the errors are fixed (the contents of the field for which you returned the error must change). Returns True on success.
     
@@ -10,10 +10,10 @@ class setPassportDataErrors(TelegramType):
     Args:
         user_id (int): User identifier.
 
-        errors (list["Types.PassportElementError"]): A JSON-serialized array describing the errors.
+        errors (list[PassportElementError]): A JSON-serialized array describing the errors.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         user_id : int = None,
         errors : list["Types.PassportElementError"] = None,
     ):

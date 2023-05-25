@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Sticker(TelegramType):
+class Sticker(TelegramObject):
     """
     This object represents a sticker.
 
@@ -20,15 +20,15 @@ class Sticker(TelegramType):
 
         is_video (bool): True, if the sticker is a video sticker.
 
-        thumbnail ("Types.PhotoSize"): Optional. Sticker thumbnail in the .WEBP or .JPG format.
+        thumbnail (PhotoSize): Optional. Sticker thumbnail in the .WEBP or .JPG format.
 
         emoji (str): Optional. Emoji associated with the sticker.
 
         set_name (str): Optional. Name of the sticker set to which the sticker belongs.
 
-        premium_animation ("Types.File"): Optional. For premium regular stickers, premium animation for the sticker.
+        premium_animation (File): Optional. For premium regular stickers, premium animation for the sticker.
 
-        mask_position ("Types.MaskPosition"): Optional. For mask stickers, the position where the mask should be placed.
+        mask_position (MaskPosition): Optional. For mask stickers, the position where the mask should be placed.
 
         custom_emoji_id (str): Optional. For custom emoji stickers, unique identifier of the custom emoji.
 
@@ -37,7 +37,7 @@ class Sticker(TelegramType):
         file_size (int): Optional. File size in bytes.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         type : str = None,

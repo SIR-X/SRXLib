@@ -1,12 +1,12 @@
 from .utils import *
 import Types
 
-class Venue(TelegramType):
+class Venue(TelegramObject):
     """
     This object represents a venue.
 
     Args:
-        location ("Types.Location"): Venue location. Can't be a live location.
+        location (Location): Venue location. Can't be a live location.
 
         title (str): Name of the venue.
 
@@ -21,7 +21,7 @@ class Venue(TelegramType):
         google_place_type (str): Optional. Google Places type of the venue. (See supported types.).
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         location : "Types.Location" = None,
         title : str = None,
         address : str = None,

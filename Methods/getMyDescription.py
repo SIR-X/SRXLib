@@ -14,7 +14,7 @@ class getMyDescription:
         """
 
         return await Curl.request(
-            url=api + "getMyDescription",
+            url=self.api + "getMyDescription",
             json={
                 "language_code": language_code,
             }

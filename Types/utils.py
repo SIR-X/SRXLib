@@ -1,6 +1,6 @@
 from orjson import dumps
 
-class TelegramType(dict):
+class TelegramObject(dict):
     def __bytes__(self) -> bytes:
         return dumps(dict(filter(lambda x: x[1], self.items())))
 

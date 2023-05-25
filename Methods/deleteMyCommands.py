@@ -17,7 +17,7 @@ class deleteMyCommands:
         """
 
         return await Curl.request(
-            url=api + "deleteMyCommands",
+            url=self.api + "deleteMyCommands",
             json={
                 "scope": scope,
                 "language_code": language_code,

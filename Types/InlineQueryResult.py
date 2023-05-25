@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResult(TelegramType):
+class InlineQueryResult(TelegramObject):
     """
     This object represents one result of an inline query. Telegram clients currently support results of the following 20 types:
     
@@ -11,7 +11,7 @@ class InlineQueryResult(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

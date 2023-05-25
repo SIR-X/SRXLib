@@ -1,10 +1,10 @@
 from .utils import *
-from Types.ForceReply import ForceReply
-from Types.MessageEntity import MessageEntity
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.InputFile import InputFile
 from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.MessageEntity import MessageEntity
+from Types.ForceReply import ForceReply
+from Types.InputFile import InputFile
 
 class sendAudio:
     async def send_audio(
@@ -63,7 +63,7 @@ class sendAudio:
         """
 
         return await Curl.request(
-            url=api + "sendAudio",
+            url=self.api + "sendAudio",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

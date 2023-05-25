@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class BotName(TelegramType):
+class BotName(TelegramObject):
     """
     This object represents the bot's name.
 
@@ -9,7 +9,7 @@ class BotName(TelegramType):
         name (str): The bot's name.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         name : str = None,
     ):
         self.update(locals())

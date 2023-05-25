@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MenuButton(TelegramType):
+class MenuButton(TelegramObject):
     """
     This object describes the bot's menu button in a private chat. It should be one of
     
@@ -11,7 +11,7 @@ class MenuButton(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MaskPosition(TelegramType):
+class MaskPosition(TelegramObject):
     """
     This object describes the position on faces where a mask should be placed by default.
 
@@ -15,7 +15,7 @@ class MaskPosition(TelegramType):
         scale (float): Mask scaling coefficient. For example, 2.0 means double size..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         point : str = None,
         x_shift : float = None,
         y_shift : float = None,

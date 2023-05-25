@@ -14,7 +14,7 @@ class logOut:
         """
 
         return await Curl.request(
-            url=api + "logOut",
+            url=self.api + "logOut",
             json={
                 
             }

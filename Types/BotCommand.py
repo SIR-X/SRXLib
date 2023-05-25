@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class BotCommand(TelegramType):
+class BotCommand(TelegramObject):
     """
     This object represents a bot command.
 
@@ -11,7 +11,7 @@ class BotCommand(TelegramType):
         description (str): Description of the command; 1-256 characters..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         command : str = None,
         description : str = None,
     ):

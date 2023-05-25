@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputTextMessageContent(TelegramType):
+class InputTextMessageContent(TelegramObject):
     """
     Represents the content of a text message to be sent as the result of an inline query.
 
@@ -10,12 +10,12 @@ class InputTextMessageContent(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the message text. See formatting options for more details..
 
-        entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in message text, which can be specified instead of parse_mode.
+        entities (list[MessageEntity]): Optional. List of special entities that appear in message text, which can be specified instead of parse_mode.
 
         disable_web_page_preview (bool): Optional. Disables link previews for links in the sent message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         message_text : str = None,
         parse_mode : str = None,
         entities : list["Types.MessageEntity"] = None,

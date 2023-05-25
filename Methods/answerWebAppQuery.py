@@ -17,7 +17,7 @@ class answerWebAppQuery:
         """
 
         return await Curl.request(
-            url=api + "answerWebAppQuery",
+            url=self.api + "answerWebAppQuery",
             json={
                 "web_app_query_id": web_app_query_id,
                 "result": result,

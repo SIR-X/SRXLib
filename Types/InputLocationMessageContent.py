@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputLocationMessageContent(TelegramType):
+class InputLocationMessageContent(TelegramObject):
     """
     Represents the content of a location message to be sent as the result of an inline query.
 
@@ -19,7 +19,7 @@ class InputLocationMessageContent(TelegramType):
         proximity_alert_radius (int): Optional. For live locations, a maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         latitude : float = None,
         longitude : float = None,
         horizontal_accuracy : float = None,

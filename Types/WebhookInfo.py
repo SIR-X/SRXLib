@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class WebhookInfo(TelegramType):
+class WebhookInfo(TelegramObject):
     """
     Describes the current status of a webhook.
     
@@ -29,7 +29,7 @@ class WebhookInfo(TelegramType):
         allowed_updates (list[str]): Optional. A list of update types the bot is subscribed to. Defaults to all update types except chat_member.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         url : str = None,
         has_custom_certificate : bool = None,
         pending_update_count : int = None,

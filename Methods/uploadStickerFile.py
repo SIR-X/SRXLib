@@ -20,7 +20,7 @@ class uploadStickerFile:
         """
 
         return await Curl.request(
-            url=api + "uploadStickerFile",
+            url=self.api + "uploadStickerFile",
             json={
                 "user_id": user_id,
                 "sticker": sticker,

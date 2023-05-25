@@ -22,7 +22,7 @@ class sendChatAction:
         """
 
         return await Curl.request(
-            url=api + "sendChatAction",
+            url=self.api + "sendChatAction",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

@@ -17,7 +17,7 @@ class setStickerSetTitle:
         """
 
         return await Curl.request(
-            url=api + "setStickerSetTitle",
+            url=self.api + "setStickerSetTitle",
             json={
                 "name": name,
                 "title": title,

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class BotCommandScopeAllPrivateChats(TelegramType):
+class BotCommandScopeAllPrivateChats(TelegramObject):
     """
     Represents the scope of bot commands, covering all private chats.
 
@@ -9,7 +9,7 @@ class BotCommandScopeAllPrivateChats(TelegramType):
         type (str): Scope type, must be all_private_chats.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
     ):
         self.update(locals())

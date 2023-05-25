@@ -29,7 +29,7 @@ class editChatInviteLink:
         """
 
         return await Curl.request(
-            url=api + "editChatInviteLink",
+            url=self.api + "editChatInviteLink",
             json={
                 "chat_id": chat_id,
                 "invite_link": invite_link,

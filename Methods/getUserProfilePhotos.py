@@ -20,7 +20,7 @@ class getUserProfilePhotos:
         """
 
         return await Curl.request(
-            url=api + "getUserProfilePhotos",
+            url=self.api + "getUserProfilePhotos",
             json={
                 "user_id": user_id,
                 "offset": offset,

@@ -31,7 +31,7 @@ class answerInlineQuery:
         """
 
         return await Curl.request(
-            url=api + "answerInlineQuery",
+            url=self.api + "answerInlineQuery",
             json={
                 "inline_query_id": inline_query_id,
                 "results": results,

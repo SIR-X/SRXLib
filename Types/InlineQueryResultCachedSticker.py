@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultCachedSticker(TelegramType):
+class InlineQueryResultCachedSticker(TelegramObject):
     """
     Represents a link to a sticker stored on the Telegram servers. By default, this sticker will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the sticker.
     
@@ -14,12 +14,12 @@ class InlineQueryResultCachedSticker(TelegramType):
 
         sticker_file_id (str): A valid file identifier of the sticker.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the sticker.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the sticker.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         sticker_file_id : str = None,

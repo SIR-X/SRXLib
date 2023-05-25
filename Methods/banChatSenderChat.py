@@ -17,7 +17,7 @@ class banChatSenderChat:
         """
 
         return await Curl.request(
-            url=api + "banChatSenderChat",
+            url=self.api + "banChatSenderChat",
             json={
                 "chat_id": chat_id,
                 "sender_chat_id": sender_chat_id,

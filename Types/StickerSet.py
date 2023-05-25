@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class StickerSet(TelegramType):
+class StickerSet(TelegramObject):
     """
     This object represents a sticker set.
 
@@ -16,12 +16,12 @@ class StickerSet(TelegramType):
 
         is_video (bool): True, if the sticker set contains video stickers.
 
-        stickers (list["Types.Sticker"]): List of all set stickers.
+        stickers (list[Sticker]): List of all set stickers.
 
-        thumbnail ("Types.PhotoSize"): Optional. Sticker set thumbnail in the .WEBP, .TGS, or .WEBM format.
+        thumbnail (PhotoSize): Optional. Sticker set thumbnail in the .WEBP, .TGS, or .WEBM format.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         name : str = None,
         title : str = None,
         sticker_type : str = None,

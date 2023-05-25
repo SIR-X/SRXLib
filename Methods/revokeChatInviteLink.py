@@ -17,7 +17,7 @@ class revokeChatInviteLink:
         """
 
         return await Curl.request(
-            url=api + "revokeChatInviteLink",
+            url=self.api + "revokeChatInviteLink",
             json={
                 "chat_id": chat_id,
                 "invite_link": invite_link,

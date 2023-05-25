@@ -20,7 +20,7 @@ class addStickerToSet:
         """
 
         return await Curl.request(
-            url=api + "addStickerToSet",
+            url=self.api + "addStickerToSet",
             json={
                 "user_id": user_id,
                 "name": name,

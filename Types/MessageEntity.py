@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MessageEntity(TelegramType):
+class MessageEntity(TelegramObject):
     """
     This object represents one special entity in a text message. For example, hashtags, usernames, URLs, etc.
 
@@ -14,14 +14,14 @@ class MessageEntity(TelegramType):
 
         url (str): Optional. For “text_link” only, URL that will be opened after user taps on the text.
 
-        user ("Types.User"): Optional. For “text_mention” only, the mentioned user.
+        user (User): Optional. For “text_mention” only, the mentioned user.
 
         language (str): Optional. For “pre” only, the programming language of the entity text.
 
         custom_emoji_id (str): Optional. For “custom_emoji” only, unique identifier of the custom emoji. Use getCustomEmojiStickers to get full information about the sticker.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         offset : int = None,
         length : int = None,

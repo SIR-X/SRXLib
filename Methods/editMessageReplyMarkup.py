@@ -23,7 +23,7 @@ class editMessageReplyMarkup:
         """
 
         return await Curl.request(
-            url=api + "editMessageReplyMarkup",
+            url=self.api + "editMessageReplyMarkup",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

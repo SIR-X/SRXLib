@@ -14,7 +14,7 @@ class getChatMemberCount:
         """
 
         return await Curl.request(
-            url=api + "getChatMemberCount",
+            url=self.api + "getChatMemberCount",
             json={
                 "chat_id": chat_id,
             }

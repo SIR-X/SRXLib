@@ -14,7 +14,7 @@ class closeGeneralForumTopic:
         """
 
         return await Curl.request(
-            url=api + "closeGeneralForumTopic",
+            url=self.api + "closeGeneralForumTopic",
             json={
                 "chat_id": chat_id,
             }

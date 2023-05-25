@@ -14,7 +14,7 @@ class getMyDefaultAdministratorRights:
         """
 
         return await Curl.request(
-            url=api + "getMyDefaultAdministratorRights",
+            url=self.api + "getMyDefaultAdministratorRights",
             json={
                 "for_channels": for_channels,
             }

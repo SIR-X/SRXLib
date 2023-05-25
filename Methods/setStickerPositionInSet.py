@@ -17,7 +17,7 @@ class setStickerPositionInSet:
         """
 
         return await Curl.request(
-            url=api + "setStickerPositionInSet",
+            url=self.api + "setStickerPositionInSet",
             json={
                 "sticker": sticker,
                 "position": position,

@@ -17,7 +17,7 @@ class setChatTitle:
         """
 
         return await Curl.request(
-            url=api + "setChatTitle",
+            url=self.api + "setChatTitle",
             json={
                 "chat_id": chat_id,
                 "title": title,

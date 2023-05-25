@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ResponseParameters(TelegramType):
+class ResponseParameters(TelegramObject):
     """
     Describes why a request was unsuccessful.
 
@@ -11,7 +11,7 @@ class ResponseParameters(TelegramType):
         retry_after (int): Optional. In case of exceeding flood control, the number of seconds left to wait before the request can be repeated.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         migrate_to_chat_id : int = None,
         retry_after : int = None,
     ):

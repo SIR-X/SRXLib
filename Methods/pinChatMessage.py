@@ -20,7 +20,7 @@ class pinChatMessage:
         """
 
         return await Curl.request(
-            url=api + "pinChatMessage",
+            url=self.api + "pinChatMessage",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

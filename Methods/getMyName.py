@@ -14,7 +14,7 @@ class getMyName:
         """
 
         return await Curl.request(
-            url=api + "getMyName",
+            url=self.api + "getMyName",
             json={
                 "language_code": language_code,
             }

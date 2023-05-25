@@ -16,7 +16,7 @@ class getFile:
         """
 
         return await Curl.request(
-            url=api + "getFile",
+            url=self.api + "getFile",
             json={
                 "file_id": file_id,
             }

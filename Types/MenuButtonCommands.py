@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MenuButtonCommands(TelegramType):
+class MenuButtonCommands(TelegramObject):
     """
     Represents a menu button, which opens the bot's list of commands.
 
@@ -9,7 +9,7 @@ class MenuButtonCommands(TelegramType):
         type (str): Type of the button, must be commands.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
     ):
         self.update(locals())

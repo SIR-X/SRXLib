@@ -1,6 +1,6 @@
 from .utils import *
-from Types.InputMediaDocument import InputMediaDocument
 from Types.InputMediaPhoto import InputMediaPhoto
+from Types.InputMediaDocument import InputMediaDocument
 from Types.InputMediaVideo import InputMediaVideo
 from Types.InputMediaAudio import InputMediaAudio
 
@@ -35,7 +35,7 @@ class sendMediaGroup:
         """
 
         return await Curl.request(
-            url=api + "sendMediaGroup",
+            url=self.api + "sendMediaGroup",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

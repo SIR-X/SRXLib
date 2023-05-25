@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class OrderInfo(TelegramType):
+class OrderInfo(TelegramObject):
     """
     This object represents information about an order.
 
@@ -12,10 +12,10 @@ class OrderInfo(TelegramType):
 
         email (str): Optional. User email.
 
-        shipping_address ("Types.ShippingAddress"): Optional. User shipping address.
+        shipping_address (ShippingAddress): Optional. User shipping address.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         name : str = None,
         phone_number : str = None,
         email : str = None,

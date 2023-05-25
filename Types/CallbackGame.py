@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class CallbackGame(TelegramType):
+class CallbackGame(TelegramObject):
     """
     A placeholder, currently holds no information. Use BotFather to set up your game.
 
@@ -9,7 +9,7 @@ class CallbackGame(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

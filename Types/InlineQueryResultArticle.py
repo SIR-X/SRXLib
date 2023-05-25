@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultArticle(TelegramType):
+class InlineQueryResultArticle(TelegramObject):
     """
     Represents a link to an article or web page.
 
@@ -12,9 +12,9 @@ class InlineQueryResultArticle(TelegramType):
 
         title (str): Title of the result.
 
-        input_message_content ("Types.InputMessageContent"): Content of the message to be sent.
+        input_message_content (InputMessageContent): Content of the message to be sent.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
         url (str): Optional. URL of the result.
 
@@ -29,7 +29,7 @@ class InlineQueryResultArticle(TelegramType):
         thumbnail_height (int): Optional. Thumbnail height.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         title : str = None,

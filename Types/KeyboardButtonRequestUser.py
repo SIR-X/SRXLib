@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class KeyboardButtonRequestUser(TelegramType):
+class KeyboardButtonRequestUser(TelegramObject):
     """
     This object defines the criteria used to request a suitable user. The identifier of the selected user will be shared with the bot when the corresponding button is pressed. More about requesting users »
 
@@ -13,7 +13,7 @@ class KeyboardButtonRequestUser(TelegramType):
         user_is_premium (bool): Optional. Pass True to request a premium user, pass False to request a non-premium user. If not specified, no additional restrictions are applied..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         request_id : int = None,
         user_is_bot : bool = None,
         user_is_premium : bool = None,

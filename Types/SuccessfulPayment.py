@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class SuccessfulPayment(TelegramType):
+class SuccessfulPayment(TelegramObject):
     """
     This object contains basic information about a successful payment.
 
@@ -14,14 +14,14 @@ class SuccessfulPayment(TelegramType):
 
         shipping_option_id (str): Optional. Identifier of the shipping option chosen by the user.
 
-        order_info ("Types.OrderInfo"): Optional. Order information provided by the user.
+        order_info (OrderInfo): Optional. Order information provided by the user.
 
         telegram_payment_charge_id (str): Telegram payment identifier.
 
         provider_payment_charge_id (str): Provider payment identifier.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         currency : str = None,
         total_amount : int = None,
         invoice_payload : str = None,

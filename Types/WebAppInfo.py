@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class WebAppInfo(TelegramType):
+class WebAppInfo(TelegramObject):
     """
     Describes a Web App.
 
@@ -9,7 +9,7 @@ class WebAppInfo(TelegramType):
         url (str): An HTTPS URL of a Web App to be opened with additional data as specified in Initializing Web Apps.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         url : str = None,
     ):
         self.update(locals())

@@ -20,7 +20,7 @@ class unbanChatMember:
         """
 
         return await Curl.request(
-            url=api + "unbanChatMember",
+            url=self.api + "unbanChatMember",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

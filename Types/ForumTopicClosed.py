@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ForumTopicClosed(TelegramType):
+class ForumTopicClosed(TelegramObject):
     """
     This object represents a service message about a forum topic closed in the chat. Currently holds no information.
 
@@ -9,7 +9,7 @@ class ForumTopicClosed(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

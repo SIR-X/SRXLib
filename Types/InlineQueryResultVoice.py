@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultVoice(TelegramType):
+class InlineQueryResultVoice(TelegramObject):
     """
     Represents a link to a voice recording in an .OGG container encoded with OPUS. By default, this voice recording will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the the voice message.
     
@@ -20,16 +20,16 @@ class InlineQueryResultVoice(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the voice message caption. See formatting options for more details..
 
-        caption_entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
+        caption_entities (list[MessageEntity]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
 
         voice_duration (int): Optional. Recording duration in seconds.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the voice recording.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the voice recording.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         voice_url : str = None,

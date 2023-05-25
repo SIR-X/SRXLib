@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class User(TelegramType):
+class User(TelegramObject):
     """
     This object represents a Telegram user or bot.
 
@@ -29,7 +29,7 @@ class User(TelegramType):
         supports_inline_queries (bool): Optional. True, if the bot supports inline queries. Returned only in getMe..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         id : int = None,
         is_bot : bool = None,
         first_name : str = None,

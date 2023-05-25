@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportElementErrorFiles(TelegramType):
+class PassportElementErrorFiles(TelegramObject):
     """
     Represents an issue with a list of scans. The error is considered resolved when the list of files containing the scans changes.
 
@@ -15,7 +15,7 @@ class PassportElementErrorFiles(TelegramType):
         message (str): Error message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         source : str = None,
         type : str = None,
         file_hashes : list[str] = None,

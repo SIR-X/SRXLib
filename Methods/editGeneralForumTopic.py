@@ -17,7 +17,7 @@ class editGeneralForumTopic:
         """
 
         return await Curl.request(
-            url=api + "editGeneralForumTopic",
+            url=self.api + "editGeneralForumTopic",
             json={
                 "chat_id": chat_id,
                 "name": name,

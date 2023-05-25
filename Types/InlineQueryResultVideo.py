@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultVideo(TelegramType):
+class InlineQueryResultVideo(TelegramObject):
     """
     Represents a link to a page containing an embedded video player or a video file. By default, this video file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the video.
 
@@ -22,7 +22,7 @@ class InlineQueryResultVideo(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the video caption. See formatting options for more details..
 
-        caption_entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
+        caption_entities (list[MessageEntity]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
 
         video_width (int): Optional. Video width.
 
@@ -32,12 +32,12 @@ class InlineQueryResultVideo(TelegramType):
 
         description (str): Optional. Short description of the result.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the video. This field is required if InlineQueryResultVideo is used to send an HTML-page as a result (e.g., a YouTube video)..
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the video. This field is required if InlineQueryResultVideo is used to send an HTML-page as a result (e.g., a YouTube video)..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         video_url : str = None,

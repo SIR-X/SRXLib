@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportElementErrorSelfie(TelegramType):
+class PassportElementErrorSelfie(TelegramObject):
     """
     Represents an issue with the selfie with a document. The error is considered resolved when the file with the selfie changes.
 
@@ -15,7 +15,7 @@ class PassportElementErrorSelfie(TelegramType):
         message (str): Error message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         source : str = None,
         type : str = None,
         file_hash : str = None,

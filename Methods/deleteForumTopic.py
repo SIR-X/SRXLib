@@ -17,7 +17,7 @@ class deleteForumTopic:
         """
 
         return await Curl.request(
-            url=api + "deleteForumTopic",
+            url=self.api + "deleteForumTopic",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

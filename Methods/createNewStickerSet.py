@@ -32,7 +32,7 @@ class createNewStickerSet:
         """
 
         return await Curl.request(
-            url=api + "createNewStickerSet",
+            url=self.api + "createNewStickerSet",
             json={
                 "user_id": user_id,
                 "name": name,

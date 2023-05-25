@@ -34,7 +34,7 @@ class setWebhook:
         """
 
         return await Curl.request(
-            url=api + "setWebhook",
+            url=self.api + "setWebhook",
             json={
                 "url": url,
                 "certificate": certificate,

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MessageId(TelegramType):
+class MessageId(TelegramObject):
     """
     This object represents a unique message identifier.
 
@@ -9,7 +9,7 @@ class MessageId(TelegramType):
         message_id (int): Unique message identifier.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         message_id : int = None,
     ):
         self.update(locals())

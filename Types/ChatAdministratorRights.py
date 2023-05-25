@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ChatAdministratorRights(TelegramType):
+class ChatAdministratorRights(TelegramObject):
     """
     Represents the rights of an administrator in a chat.
 
@@ -31,7 +31,7 @@ class ChatAdministratorRights(TelegramType):
         can_manage_topics (bool): Optional. True, if the user is allowed to create, rename, close, and reopen forum topics; supergroups only.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         is_anonymous : bool = None,
         can_manage_chat : bool = None,
         can_delete_messages : bool = None,

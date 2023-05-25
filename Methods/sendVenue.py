@@ -1,8 +1,8 @@
 from .utils import *
-from Types.ForceReply import ForceReply
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+from Types.ForceReply import ForceReply
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 
 class sendVenue:
     async def send_venue(
@@ -59,7 +59,7 @@ class sendVenue:
         """
 
         return await Curl.request(
-            url=api + "sendVenue",
+            url=self.api + "sendVenue",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

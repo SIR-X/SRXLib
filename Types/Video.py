@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Video(TelegramType):
+class Video(TelegramObject):
     """
     This object represents a video file.
 
@@ -16,7 +16,7 @@ class Video(TelegramType):
 
         duration (int): Duration of the video in seconds as defined by sender.
 
-        thumbnail ("Types.PhotoSize"): Optional. Video thumbnail.
+        thumbnail (PhotoSize): Optional. Video thumbnail.
 
         file_name (str): Optional. Original filename as defined by sender.
 
@@ -25,7 +25,7 @@ class Video(TelegramType):
         file_size (int): Optional. File size in bytes. It can be bigger than 2^31 and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a signed 64-bit integer or double-precision float type are safe for storing this value..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         width : int = None,

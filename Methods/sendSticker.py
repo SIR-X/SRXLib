@@ -1,9 +1,9 @@
 from .utils import *
-from Types.ForceReply import ForceReply
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.InputFile import InputFile
 from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ForceReply import ForceReply
+from Types.InputFile import InputFile
 
 class sendSticker:
     async def send_sticker(
@@ -42,7 +42,7 @@ class sendSticker:
         """
 
         return await Curl.request(
-            url=api + "sendSticker",
+            url=self.api + "sendSticker",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

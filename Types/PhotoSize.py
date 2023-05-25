@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PhotoSize(TelegramType):
+class PhotoSize(TelegramObject):
     """
     This object represents one size of a photo or a file / sticker thumbnail.
 
@@ -17,7 +17,7 @@ class PhotoSize(TelegramType):
         file_size (int): Optional. File size in bytes.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         width : int = None,

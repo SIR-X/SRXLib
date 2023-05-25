@@ -1,12 +1,12 @@
 from .utils import *
 import Types
 
-class ReplyKeyboardMarkup(TelegramType):
+class ReplyKeyboardMarkup(TelegramObject):
     """
     This object represents a custom keyboard with reply options (see Introduction to bots for details and examples).
 
     Args:
-        keyboard (list[list["Types.KeyboardButton"]]): Array of button rows, each represented by an Array of KeyboardButton objects.
+        keyboard (list[list[KeyboardButton]]): Array of button rows, each represented by an Array of KeyboardButton objects.
 
         is_persistent (bool): Optional. Requests clients to always show the keyboard when the regular keyboard is hidden. Defaults to false, in which case the custom keyboard can be hidden and opened with a keyboard icon..
 
@@ -19,7 +19,7 @@ class ReplyKeyboardMarkup(TelegramType):
         selective (bool): Optional. Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.Example: A user requests to change the bot's language, bot replies to the request with a keyboard to select the new language. Other users in the group don't see the keyboard..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         keyboard : list[list["Types.KeyboardButton"]] = None,
         is_persistent : bool = None,
         resize_keyboard : bool = None,

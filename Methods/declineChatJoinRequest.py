@@ -17,7 +17,7 @@ class declineChatJoinRequest:
         """
 
         return await Curl.request(
-            url=api + "declineChatJoinRequest",
+            url=self.api + "declineChatJoinRequest",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

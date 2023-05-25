@@ -23,7 +23,7 @@ class getUpdates:
         """
 
         return await Curl.request(
-            url=api + "getUpdates",
+            url=self.api + "getUpdates",
             json={
                 "offset": offset,
                 "limit": limit,

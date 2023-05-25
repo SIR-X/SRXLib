@@ -26,7 +26,7 @@ class createChatInviteLink:
         """
 
         return await Curl.request(
-            url=api + "createChatInviteLink",
+            url=self.api + "createChatInviteLink",
             json={
                 "chat_id": chat_id,
                 "name": name,

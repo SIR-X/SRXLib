@@ -1,9 +1,9 @@
 from .utils import *
-from Types.ForceReply import ForceReply
-from Types.MessageEntity import MessageEntity
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.MessageEntity import MessageEntity
+from Types.ForceReply import ForceReply
 
 class copyMessage:
     async def copy_message(
@@ -51,7 +51,7 @@ class copyMessage:
         """
 
         return await Curl.request(
-            url=api + "copyMessage",
+            url=self.api + "copyMessage",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

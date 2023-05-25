@@ -20,7 +20,7 @@ class setChatAdministratorCustomTitle:
         """
 
         return await Curl.request(
-            url=api + "setChatAdministratorCustomTitle",
+            url=self.api + "setChatAdministratorCustomTitle",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

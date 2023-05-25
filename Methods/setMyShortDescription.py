@@ -17,7 +17,7 @@ class setMyShortDescription:
         """
 
         return await Curl.request(
-            url=api + "setMyShortDescription",
+            url=self.api + "setMyShortDescription",
             json={
                 "short_description": short_description,
                 "language_code": language_code,

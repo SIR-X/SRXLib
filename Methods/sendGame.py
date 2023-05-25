@@ -35,7 +35,7 @@ class sendGame:
         """
 
         return await Curl.request(
-            url=api + "sendGame",
+            url=self.api + "sendGame",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

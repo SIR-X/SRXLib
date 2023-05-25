@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputInvoiceMessageContent(TelegramType):
+class InputInvoiceMessageContent(TelegramObject):
     """
     Represents the content of an invoice message to be sent as the result of an inline query.
 
@@ -16,7 +16,7 @@ class InputInvoiceMessageContent(TelegramType):
 
         currency (str): Three-letter ISO 4217 currency code, see more on currencies.
 
-        prices (list["Types.LabeledPrice"]): Price breakdown, a JSON-serialized list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.).
+        prices (list[LabeledPrice]): Price breakdown, a JSON-serialized list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.).
 
         max_tip_amount (int): Optional. The maximum accepted amount for tips in the smallest units of the currency (integer, not float/double). For example, for a maximum tip of US$ 1.45 pass max_tip_amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0.
 
@@ -47,7 +47,7 @@ class InputInvoiceMessageContent(TelegramType):
         is_flexible (bool): Optional. Pass True if the final price depends on the shipping method.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         title : str = None,
         description : str = None,
         payload : str = None,

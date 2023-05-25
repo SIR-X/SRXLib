@@ -17,7 +17,7 @@ class approveChatJoinRequest:
         """
 
         return await Curl.request(
-            url=api + "approveChatJoinRequest",
+            url=self.api + "approveChatJoinRequest",
             json={
                 "chat_id": chat_id,
                 "user_id": user_id,

@@ -27,7 +27,7 @@ class editMessageMedia:
         """
 
         return await Curl.request(
-            url=api + "editMessageMedia",
+            url=self.api + "editMessageMedia",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

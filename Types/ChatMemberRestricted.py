@@ -1,14 +1,14 @@
 from .utils import *
 import Types
 
-class ChatMemberRestricted(TelegramType):
+class ChatMemberRestricted(TelegramObject):
     """
     Represents a chat member that is under certain restrictions in the chat. Supergroups only.
 
     Args:
         status (str): The member's status in the chat, always “restricted”.
 
-        user ("Types.User"): Information about the user.
+        user (User): Information about the user.
 
         is_member (bool): True, if the user is a member of the chat at the moment of the request.
 
@@ -43,7 +43,7 @@ class ChatMemberRestricted(TelegramType):
         until_date (int): Date when restrictions will be lifted for this user; unix time. If 0, then the user is restricted forever.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         status : str = None,
         user : "Types.User" = None,
         is_member : bool = None,

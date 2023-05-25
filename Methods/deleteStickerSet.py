@@ -19,7 +19,7 @@ class deleteStickerSet:
         """
 
         return await Curl.request(
-            url=api + "deleteStickerSet",
+            url=self.api + "deleteStickerSet",
             json={
                 "name": name,
             }

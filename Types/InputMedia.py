@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputMedia(TelegramType):
+class InputMedia(TelegramObject):
     """
     This object represents the content of a media message to be sent. It should be one of
 
@@ -9,7 +9,7 @@ class InputMedia(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())

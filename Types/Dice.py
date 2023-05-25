@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Dice(TelegramType):
+class Dice(TelegramObject):
     """
     This object represents an animated emoji that displays a random value.
 
@@ -11,7 +11,7 @@ class Dice(TelegramType):
         value (int): Value of the dice, 1-6 for “”, “” and “” base emoji, 1-5 for “” and “” base emoji, 1-64 for “” base emoji.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         emoji : str = None,
         value : int = None,
     ):

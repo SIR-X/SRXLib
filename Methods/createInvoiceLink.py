@@ -71,7 +71,7 @@ class createInvoiceLink:
         """
 
         return await Curl.request(
-            url=api + "createInvoiceLink",
+            url=self.api + "createInvoiceLink",
             json={
                 "title": title,
                 "description": description,

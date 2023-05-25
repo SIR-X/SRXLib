@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class SentWebAppMessage(TelegramType):
+class SentWebAppMessage(TelegramObject):
     """
     Describes an inline message sent by a Web App on behalf of a user.
     
@@ -11,7 +11,7 @@ class SentWebAppMessage(TelegramType):
         inline_message_id (str): Optional. Identifier of the sent inline message. Available only if there is an inline keyboard attached to the message..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         inline_message_id : str = None,
     ):
         self.update(locals())

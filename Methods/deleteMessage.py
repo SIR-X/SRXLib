@@ -28,7 +28,7 @@ class deleteMessage:
         """
 
         return await Curl.request(
-            url=api + "deleteMessage",
+            url=self.api + "deleteMessage",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

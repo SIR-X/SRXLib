@@ -17,7 +17,7 @@ class setChatDescription:
         """
 
         return await Curl.request(
-            url=api + "setChatDescription",
+            url=self.api + "setChatDescription",
             json={
                 "chat_id": chat_id,
                 "description": description,

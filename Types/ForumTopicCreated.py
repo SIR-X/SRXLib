@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class ForumTopicCreated(TelegramType):
+class ForumTopicCreated(TelegramObject):
     """
     This object represents a service message about a new forum topic created in the chat.
 
@@ -13,7 +13,7 @@ class ForumTopicCreated(TelegramType):
         icon_custom_emoji_id (str): Optional. Unique identifier of the custom emoji shown as the topic icon.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         name : str = None,
         icon_color : int = None,
         icon_custom_emoji_id : str = None,

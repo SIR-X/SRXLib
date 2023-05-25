@@ -1,8 +1,8 @@
 from .utils import *
-from Types.ForceReply import ForceReply
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+from Types.ForceReply import ForceReply
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 
 class sendContact:
     async def send_contact(
@@ -47,7 +47,7 @@ class sendContact:
         """
 
         return await Curl.request(
-            url=api + "sendContact",
+            url=self.api + "sendContact",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

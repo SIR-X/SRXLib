@@ -17,7 +17,7 @@ class setCustomEmojiStickerSetThumbnail:
         """
 
         return await Curl.request(
-            url=api + "setCustomEmojiStickerSetThumbnail",
+            url=self.api + "setCustomEmojiStickerSetThumbnail",
             json={
                 "name": name,
                 "custom_emoji_id": custom_emoji_id,

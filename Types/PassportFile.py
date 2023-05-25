@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportFile(TelegramType):
+class PassportFile(TelegramObject):
     """
     This object represents a file uploaded to Telegram Passport. Currently all Telegram Passport files are in JPEG format when decrypted and don't exceed 10MB.
 
@@ -15,7 +15,7 @@ class PassportFile(TelegramType):
         file_date (int): Unix time when the file was uploaded.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         file_size : int = None,

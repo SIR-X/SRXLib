@@ -14,7 +14,7 @@ class getChatMenuButton:
         """
 
         return await Curl.request(
-            url=api + "getChatMenuButton",
+            url=self.api + "getChatMenuButton",
             json={
                 "chat_id": chat_id,
             }

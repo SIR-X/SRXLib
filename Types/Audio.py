@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Audio(TelegramType):
+class Audio(TelegramObject):
     """
     This object represents an audio file to be treated as music by the Telegram clients.
 
@@ -22,10 +22,10 @@ class Audio(TelegramType):
 
         file_size (int): Optional. File size in bytes. It can be bigger than 2^31 and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a signed 64-bit integer or double-precision float type are safe for storing this value..
 
-        thumbnail ("Types.PhotoSize"): Optional. Thumbnail of the album cover to which the music file belongs.
+        thumbnail (PhotoSize): Optional. Thumbnail of the album cover to which the music file belongs.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         file_id : str = None,
         file_unique_id : str = None,
         duration : int = None,

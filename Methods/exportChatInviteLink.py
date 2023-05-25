@@ -14,7 +14,7 @@ class exportChatInviteLink:
         """
 
         return await Curl.request(
-            url=api + "exportChatInviteLink",
+            url=self.api + "exportChatInviteLink",
             json={
                 "chat_id": chat_id,
             }

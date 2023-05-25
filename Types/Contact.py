@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Contact(TelegramType):
+class Contact(TelegramObject):
     """
     This object represents a phone contact.
 
@@ -17,7 +17,7 @@ class Contact(TelegramType):
         vcard (str): Optional. Additional data about the contact in the form of a vCard.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         phone_number : str = None,
         first_name : str = None,
         last_name : str = None,

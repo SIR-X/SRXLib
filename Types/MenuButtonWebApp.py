@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class MenuButtonWebApp(TelegramType):
+class MenuButtonWebApp(TelegramObject):
     """
     Represents a menu button, which launches a Web App.
 
@@ -10,10 +10,10 @@ class MenuButtonWebApp(TelegramType):
 
         text (str): Text on the button.
 
-        web_app ("Types.WebAppInfo"): Description of the Web App that will be launched when the user presses the button. The Web App will be able to send an arbitrary message on behalf of the user using the method answerWebAppQuery..
+        web_app (WebAppInfo): Description of the Web App that will be launched when the user presses the button. The Web App will be able to send an arbitrary message on behalf of the user using the method answerWebAppQuery..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         text : str = None,
         web_app : "Types.WebAppInfo" = None,

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultMpeg4Gif(TelegramType):
+class InlineQueryResultMpeg4Gif(TelegramObject):
     """
     Represents a link to a video animation (H.264/MPEG-4 AVC video without sound). By default, this animated MPEG-4 file will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation.
 
@@ -28,14 +28,14 @@ class InlineQueryResultMpeg4Gif(TelegramType):
 
         parse_mode (str): Optional. Mode for parsing entities in the caption. See formatting options for more details..
 
-        caption_entities (list["Types.MessageEntity"]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
+        caption_entities (list[MessageEntity]): Optional. List of special entities that appear in the caption, which can be specified instead of parse_mode.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
 
-        input_message_content ("Types.InputMessageContent"): Optional. Content of the message to be sent instead of the video animation.
+        input_message_content (InputMessageContent): Optional. Content of the message to be sent instead of the video animation.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         mpeg4_url : str = None,

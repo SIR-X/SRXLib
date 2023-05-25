@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportElementErrorDataField(TelegramType):
+class PassportElementErrorDataField(TelegramObject):
     """
     Represents an issue in one of the data fields that was provided by the user. The error is considered resolved when the field's value changes.
 
@@ -17,7 +17,7 @@ class PassportElementErrorDataField(TelegramType):
         message (str): Error message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         source : str = None,
         type : str = None,
         field_name : str = None,

@@ -20,7 +20,7 @@ class setStickerSetThumbnail:
         """
 
         return await Curl.request(
-            url=api + "setStickerSetThumbnail",
+            url=self.api + "setStickerSetThumbnail",
             json={
                 "name": name,
                 "user_id": user_id,

@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class PassportElementErrorUnspecified(TelegramType):
+class PassportElementErrorUnspecified(TelegramObject):
     """
     Represents an issue in an unspecified place. The error is considered resolved when new data is added.
     
@@ -17,7 +17,7 @@ class PassportElementErrorUnspecified(TelegramType):
         message (str): Error message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         source : str = None,
         type : str = None,
         element_hash : str = None,

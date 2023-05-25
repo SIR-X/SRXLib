@@ -33,7 +33,7 @@ class editMessageCaption:
         """
 
         return await Curl.request(
-            url=api + "editMessageCaption",
+            url=self.api + "editMessageCaption",
             json={
                 "chat_id": chat_id,
                 "message_id": message_id,

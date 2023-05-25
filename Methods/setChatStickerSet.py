@@ -17,7 +17,7 @@ class setChatStickerSet:
         """
 
         return await Curl.request(
-            url=api + "setChatStickerSet",
+            url=self.api + "setChatStickerSet",
             json={
                 "chat_id": chat_id,
                 "sticker_set_name": sticker_set_name,

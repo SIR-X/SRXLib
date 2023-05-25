@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InlineQueryResultGame(TelegramType):
+class InlineQueryResultGame(TelegramObject):
     """
     Represents a Game.
     
@@ -14,10 +14,10 @@ class InlineQueryResultGame(TelegramType):
 
         game_short_name (str): Short name of the game.
 
-        reply_markup ("Types.InlineKeyboardMarkup"): Optional. Inline keyboard attached to the message.
+        reply_markup (InlineKeyboardMarkup): Optional. Inline keyboard attached to the message.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         type : str = None,
         id : str = None,
         game_short_name : str = None,

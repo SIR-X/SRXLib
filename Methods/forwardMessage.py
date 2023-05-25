@@ -29,7 +29,7 @@ class forwardMessage:
         """
 
         return await Curl.request(
-            url=api + "forwardMessage",
+            url=self.api + "forwardMessage",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

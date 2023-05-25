@@ -14,7 +14,7 @@ class getWebhookInfo:
         """
 
         return await Curl.request(
-            url=api + "getWebhookInfo",
+            url=self.api + "getWebhookInfo",
             json={
                 
             }

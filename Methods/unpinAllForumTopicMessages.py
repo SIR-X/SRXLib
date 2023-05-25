@@ -17,7 +17,7 @@ class unpinAllForumTopicMessages:
         """
 
         return await Curl.request(
-            url=api + "unpinAllForumTopicMessages",
+            url=self.api + "unpinAllForumTopicMessages",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

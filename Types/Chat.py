@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class Chat(TelegramType):
+class Chat(TelegramObject):
     """
     This object represents a chat.
 
@@ -20,7 +20,7 @@ class Chat(TelegramType):
 
         is_forum (bool): Optional. True, if the supergroup chat is a forum (has topics enabled).
 
-        photo ("Types.ChatPhoto"): Optional. Chat photo. Returned only in getChat..
+        photo (ChatPhoto): Optional. Chat photo. Returned only in getChat..
 
         active_usernames (list[str]): Optional. If non-empty, the list of all active chat usernames; for private chats, supergroups and channels. Returned only in getChat..
 
@@ -40,9 +40,9 @@ class Chat(TelegramType):
 
         invite_link (str): Optional. Primary invite link, for groups, supergroups and channel chats. Returned only in getChat..
 
-        pinned_message ("Types.Message"): Optional. The most recent pinned message (by sending date). Returned only in getChat..
+        pinned_message (Message): Optional. The most recent pinned message (by sending date). Returned only in getChat..
 
-        permissions ("Types.ChatPermissions"): Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat..
+        permissions (ChatPermissions): Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat..
 
         slow_mode_delay (int): Optional. For supergroups, the minimum allowed delay between consecutive messages sent by each unpriviledged user; in seconds. Returned only in getChat..
 
@@ -60,10 +60,10 @@ class Chat(TelegramType):
 
         linked_chat_id (int): Optional. Unique identifier for the linked chat, i.e. the discussion group identifier for a channel and vice versa; for supergroups and channel chats. This identifier may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier. Returned only in getChat..
 
-        location ("Types.ChatLocation"): Optional. For supergroups, the location to which the supergroup is connected. Returned only in getChat..
+        location (ChatLocation): Optional. For supergroups, the location to which the supergroup is connected. Returned only in getChat..
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         id : int = None,
         type : str = None,
         title : str = None,

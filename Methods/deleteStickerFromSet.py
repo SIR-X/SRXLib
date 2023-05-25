@@ -14,7 +14,7 @@ class deleteStickerFromSet:
         """
 
         return await Curl.request(
-            url=api + "deleteStickerFromSet",
+            url=self.api + "deleteStickerFromSet",
             json={
                 "sticker": sticker,
             }

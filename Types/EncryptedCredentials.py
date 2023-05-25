@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class EncryptedCredentials(TelegramType):
+class EncryptedCredentials(TelegramObject):
     """
     Describes data required for decrypting and authenticating EncryptedPassportElement. See the Telegram Passport Documentation for a complete description of the data decryption and authentication processes.
 
@@ -13,7 +13,7 @@ class EncryptedCredentials(TelegramType):
         secret (str): Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption.
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         data : str = None,
         hash : str = None,
         secret : str = None,

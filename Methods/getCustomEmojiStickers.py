@@ -14,7 +14,7 @@ class getCustomEmojiStickers:
         """
 
         return await Curl.request(
-            url=api + "getCustomEmojiStickers",
+            url=self.api + "getCustomEmojiStickers",
             json={
                 "custom_emoji_ids": custom_emoji_ids,
             }

@@ -96,7 +96,7 @@ class sendInvoice:
         """
 
         return await Curl.request(
-            url=api + "sendInvoice",
+            url=self.api + "sendInvoice",
             json={
                 "chat_id": chat_id,
                 "message_thread_id": message_thread_id,

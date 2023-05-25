@@ -1,7 +1,7 @@
 from .utils import *
 import Types
 
-class InputMessageContent(TelegramType):
+class InputMessageContent(TelegramObject):
     """
     This object represents the content of a message to be sent as a result of an inline query. Telegram clients currently support the following 5 types:
 
@@ -9,7 +9,7 @@ class InputMessageContent(TelegramType):
         
     """   
     def __init__(
-        self: TelegramType,
+        self: TelegramObject,
         
     ):
         self.update(locals())
