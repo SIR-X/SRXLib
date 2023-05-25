@@ -1,14 +1,15 @@
 from .utils import *
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+import typing
 from Types.MessageEntity import MessageEntity
 from Types.ForceReply import ForceReply
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
+from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
 
 class sendMessage:
     async def send_message(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
         text : str = None,
         parse_mode : str = None,
@@ -18,7 +19,7 @@ class sendMessage:
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send text messages. On success, the sent Message is returned.

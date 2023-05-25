@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class revokeChatInviteLink:
     async def revoke_chat_invite_link(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         invite_link : str = None,
     ):
         """

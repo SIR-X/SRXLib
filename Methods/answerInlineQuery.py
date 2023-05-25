@@ -1,6 +1,7 @@
 from .utils import *
-from Types.InlineQueryResult import InlineQueryResult
+import typing
 from Types.InlineQueryResultsButton import InlineQueryResultsButton
+from Types.InlineQueryResult import InlineQueryResult
 
 class answerInlineQuery:
     async def answer_inline_query(

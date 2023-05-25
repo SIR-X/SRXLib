@@ -1,29 +1,30 @@
 from .utils import *
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+import typing
+from Types.InputFile import InputFile
 from Types.MessageEntity import MessageEntity
 from Types.ForceReply import ForceReply
-from Types.InputFile import InputFile
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
+from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
 
 class sendAudio:
     async def send_audio(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        audio : InputFile | str = None,
+        audio : typing.Union[InputFile, str] = None,
         caption : str = None,
         parse_mode : str = None,
         caption_entities : list[MessageEntity] = None,
         duration : int = None,
         performer : str = None,
         title : str = None,
-        thumbnail : InputFile | str = None,
+        thumbnail : typing.Union[InputFile, str] = None,
         disable_notification : bool = None,
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .MP3 or .M4A format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.

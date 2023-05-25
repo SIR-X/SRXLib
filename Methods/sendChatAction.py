@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class sendChatAction:
     async def send_chat_action(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
         action : str = None,
     ):

@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class deleteChatPhoto:
     async def delete_chat_photo(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
     ):
         """
         Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns True on success.

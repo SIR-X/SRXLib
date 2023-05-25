@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class createForumTopic:
     async def create_forum_topic(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         name : str = None,
         icon_color : int = None,
         icon_custom_emoji_id : str = None,

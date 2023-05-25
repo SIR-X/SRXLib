@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 from Types.InputFile import InputFile
 
 class setStickerSetThumbnail:
@@ -6,7 +7,7 @@ class setStickerSetThumbnail:
         self,
         name : str = None,
         user_id : int = None,
-        thumbnail : InputFile | str = None,
+        thumbnail : typing.Union[InputFile, str] = None,
     ):
         """
         Use this method to set the thumbnail of a regular or mask sticker set. The format of the thumbnail file must match the format of the stickers in the set. Returns True on success.

@@ -1,5 +1,5 @@
 from .utils import *
-import Types
+import Types, typing
 
 class BotCommandScopeChatAdministrators(TelegramObject):
     """
@@ -13,6 +13,6 @@ class BotCommandScopeChatAdministrators(TelegramObject):
     def __init__(
         self: TelegramObject,
         type : str = None,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
     ):
         self.update(locals())

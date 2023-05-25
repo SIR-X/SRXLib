@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 
 class editMessageReplyMarkup:
     async def edit_message_reply_markup(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_id : int = None,
         inline_message_id : str = None,
         reply_markup : InlineKeyboardMarkup = None,

@@ -1,5 +1,5 @@
 from .utils import *
-import Types
+import Types, typing
 
 class setPassportDataErrors(TelegramObject):
     """

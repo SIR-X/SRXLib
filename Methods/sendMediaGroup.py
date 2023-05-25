@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 from Types.InputMediaPhoto import InputMediaPhoto
 from Types.InputMediaDocument import InputMediaDocument
 from Types.InputMediaVideo import InputMediaVideo
@@ -7,7 +8,7 @@ from Types.InputMediaAudio import InputMediaAudio
 class sendMediaGroup:
     async def send_media_group(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
         media : list[InputMediaAudio | InputMediaDocument | InputMediaPhoto| InputMediaVideo] = None,
         disable_notification : bool = None,

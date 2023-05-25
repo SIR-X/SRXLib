@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 from Types.InputFile import InputFile
 
 class setChatPhoto:
     async def set_chat_photo(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         photo : InputFile = None,
     ):
         """

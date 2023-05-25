@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class unbanChatMember:
     async def unban_chat_member(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         user_id : int = None,
         only_if_banned : bool = None,
     ):

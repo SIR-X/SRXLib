@@ -1,5 +1,5 @@
 from .utils import *
-import Types
+import Types, typing
 
 class sendVideoNote(TelegramObject):
     """
@@ -30,16 +30,16 @@ class sendVideoNote(TelegramObject):
     """   
     def __init__(
         self: TelegramObject,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        video_note : "Types.InputFile" | str = None,
+        video_note : typing.Union["Types.InputFile", str] = None,
         duration : int = None,
         length : int = None,
-        thumbnail : "Types.InputFile" | str = None,
+        thumbnail : typing.Union["Types.InputFile", str] = None,
         disable_notification : bool = None,
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : "Types.InlineKeyboardMarkup" | "Types.ReplyKeyboardMarkup" | "Types.ReplyKeyboardRemove" | "Types.ForceReply" = None,
+        reply_markup : typing.Union["Types.InlineKeyboardMarkup", "Types.ReplyKeyboardMarkup", "Types.ReplyKeyboardRemove", "Types.ForceReply"] = None,
     ):
         self.update(locals())

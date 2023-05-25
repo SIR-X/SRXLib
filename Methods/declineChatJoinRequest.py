@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class declineChatJoinRequest:
     async def decline_chat_join_request(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         user_id : int = None,
     ):
         """

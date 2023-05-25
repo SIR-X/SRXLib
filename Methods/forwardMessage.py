@@ -1,12 +1,13 @@
 from .utils import *
+import typing
 
 
 class forwardMessage:
     async def forward_message(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        from_chat_id : int | str = None,
+        from_chat_id : typing.Union[int, str] = None,
         disable_notification : bool = None,
         protect_content : bool = None,
         message_id : int = None,

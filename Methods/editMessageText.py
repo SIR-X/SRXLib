@@ -1,11 +1,12 @@
 from .utils import *
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.MessageEntity import MessageEntity
 
 class editMessageText:
     async def edit_message_text(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_id : int = None,
         inline_message_id : str = None,
         text : str = None,

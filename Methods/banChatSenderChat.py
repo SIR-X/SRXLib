@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class banChatSenderChat:
     async def ban_chat_sender_chat(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         sender_chat_id : int = None,
     ):
         """

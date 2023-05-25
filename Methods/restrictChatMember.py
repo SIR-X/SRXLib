@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 from Types.ChatPermissions import ChatPermissions
 
 class restrictChatMember:
     async def restrict_chat_member(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         user_id : int = None,
         permissions : ChatPermissions = None,
         use_independent_chat_permissions : bool = None,

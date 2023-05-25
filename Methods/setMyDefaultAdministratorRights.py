@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 from Types.ChatAdministratorRights import ChatAdministratorRights
 
 class setMyDefaultAdministratorRights:

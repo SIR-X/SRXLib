@@ -1,18 +1,19 @@
 from .utils import *
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+import typing
+from Types.InputFile import InputFile
 from Types.MessageEntity import MessageEntity
 from Types.ForceReply import ForceReply
-from Types.InputFile import InputFile
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
+from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
 
 class sendDocument:
     async def send_document(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        document : InputFile | str = None,
-        thumbnail : InputFile | str = None,
+        document : typing.Union[InputFile, str] = None,
+        thumbnail : typing.Union[InputFile, str] = None,
         caption : str = None,
         parse_mode : str = None,
         caption_entities : list[MessageEntity] = None,
@@ -21,7 +22,7 @@ class sendDocument:
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future.

@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 
 class stopMessageLiveLocation:
     async def stop_message_live_location(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_id : int = None,
         inline_message_id : str = None,
         reply_markup : InlineKeyboardMarkup = None,

@@ -1,5 +1,5 @@
 from .utils import *
-import Types
+import Types, typing
 
 class InputSticker(TelegramObject):
     """
@@ -16,7 +16,7 @@ class InputSticker(TelegramObject):
     """   
     def __init__(
         self: TelegramObject,
-        sticker : "Types.InputFile" | str = None,
+        sticker : typing.Union["Types.InputFile", str] = None,
         emoji_list : list[str] = None,
         mask_position : "Types.MaskPosition" = None,
         keywords : list[str] = None,

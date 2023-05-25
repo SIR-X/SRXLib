@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class setChatStickerSet:
     async def set_chat_sticker_set(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         sticker_set_name : str = None,
     ):
         """

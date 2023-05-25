@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class pinChatMessage:
     async def pin_chat_message(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_id : int = None,
         disable_notification : bool = None,
     ):

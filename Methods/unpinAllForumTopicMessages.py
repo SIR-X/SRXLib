@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class unpinAllForumTopicMessages:
     async def unpin_all_forum_topic_messages(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
     ):
         """

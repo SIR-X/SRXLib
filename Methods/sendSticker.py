@@ -1,22 +1,23 @@
 from .utils import *
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+import typing
+from Types.InputFile import InputFile
+from Types.ForceReply import ForceReply
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
-from Types.ForceReply import ForceReply
-from Types.InputFile import InputFile
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
 
 class sendSticker:
     async def send_sticker(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        sticker : InputFile | str = None,
+        sticker : typing.Union[InputFile, str] = None,
         emoji : str = None,
         disable_notification : bool = None,
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers. On success, the sent Message is returned.

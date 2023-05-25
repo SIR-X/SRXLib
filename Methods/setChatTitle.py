@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class setChatTitle:
     async def set_chat_title(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         title : str = None,
     ):
         """

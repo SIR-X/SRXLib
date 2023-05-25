@@ -1,17 +1,18 @@
 from .utils import *
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+import typing
+from Types.InputFile import InputFile
 from Types.MessageEntity import MessageEntity
 from Types.ForceReply import ForceReply
-from Types.InputFile import InputFile
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
+from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
 
 class sendPhoto:
     async def send_photo(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        photo : InputFile | str = None,
+        photo : typing.Union[InputFile, str] = None,
         caption : str = None,
         parse_mode : str = None,
         caption_entities : list[MessageEntity] = None,
@@ -20,7 +21,7 @@ class sendPhoto:
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send photos. On success, the sent Message is returned.

@@ -1,5 +1,5 @@
 from .utils import *
-import Types
+import Types, typing
 
 class InputMediaVideo(TelegramObject):
     """
@@ -32,7 +32,7 @@ class InputMediaVideo(TelegramObject):
         self: TelegramObject,
         type : str = None,
         media : str = None,
-        thumbnail : "Types.InputFile" | str = None,
+        thumbnail : typing.Union["Types.InputFile", str] = None,
         caption : str = None,
         parse_mode : str = None,
         caption_entities : list["Types.MessageEntity"] = None,

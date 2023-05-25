@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class editGeneralForumTopic:
     async def edit_general_forum_topic(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         name : str = None,
     ):
         """

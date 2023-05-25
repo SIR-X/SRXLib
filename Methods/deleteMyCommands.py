@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 from Types.BotCommandScope import BotCommandScope
 
 class deleteMyCommands:

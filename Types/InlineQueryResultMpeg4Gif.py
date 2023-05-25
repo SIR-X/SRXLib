@@ -1,5 +1,5 @@
 from .utils import *
-import Types
+import Types, typing
 
 class InlineQueryResultMpeg4Gif(TelegramObject):
     """

@@ -1,21 +1,22 @@
 from .utils import *
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
-from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+import typing
+from Types.InputFile import InputFile
 from Types.MessageEntity import MessageEntity
 from Types.ForceReply import ForceReply
-from Types.InputFile import InputFile
+from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
+from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
 
 class sendAnimation:
     async def send_animation(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
-        animation : InputFile | str = None,
+        animation : typing.Union[InputFile, str] = None,
         duration : int = None,
         width : int = None,
         height : int = None,
-        thumbnail : InputFile | str = None,
+        thumbnail : typing.Union[InputFile, str] = None,
         caption : str = None,
         parse_mode : str = None,
         caption_entities : list[MessageEntity] = None,
@@ -24,7 +25,7 @@ class sendAnimation:
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 MB in size, this limit may be changed in the future.

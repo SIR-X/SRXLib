@@ -1,11 +1,12 @@
 from .utils import *
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.InputMedia import InputMedia
 
 class editMessageMedia:
     async def edit_message_media(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_id : int = None,
         inline_message_id : str = None,
         media : InputMedia = None,

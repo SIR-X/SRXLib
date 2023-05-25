@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 from Types.MenuButton import MenuButton
 
 class setChatMenuButton:

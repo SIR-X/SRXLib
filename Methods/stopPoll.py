@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 
 class stopPoll:
     async def stop_poll(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_id : int = None,
         reply_markup : InlineKeyboardMarkup = None,
     ):

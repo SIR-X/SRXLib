@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 
 
 class getChatMenuButton:

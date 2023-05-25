@@ -1,6 +1,7 @@
 from .utils import *
-from Types.BotCommandScope import BotCommandScope
+import typing
 from Types.BotCommand import BotCommand
+from Types.BotCommandScope import BotCommandScope
 
 class setMyCommands:
     async def set_my_commands(

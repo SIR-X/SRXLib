@@ -1,4 +1,5 @@
 from .utils import *
+import typing
 from Types.InputFile import InputFile
 
 class setWebhook:

@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class getChatMember:
     async def get_chat_member(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         user_id : int = None,
     ):
         """

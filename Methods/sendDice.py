@@ -1,20 +1,21 @@
 from .utils import *
-from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
-from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
-from Types.ForceReply import ForceReply
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
+from Types.ReplyKeyboardRemove import ReplyKeyboardRemove
+from Types.ReplyKeyboardMarkup import ReplyKeyboardMarkup
+from Types.ForceReply import ForceReply
 
 class sendDice:
     async def send_dice(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
         emoji : str = None,
         disable_notification : bool = None,
         protect_content : bool = None,
         reply_to_message_id : int = None,
         allow_sending_without_reply : bool = None,
-        reply_markup : InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = None,
+        reply_markup : typing.Union[InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, ForceReply] = None,
     ):
         """
         Use this method to send an animated emoji that will display a random value. On success, the sent Message is returned.

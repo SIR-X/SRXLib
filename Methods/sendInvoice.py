@@ -1,11 +1,12 @@
 from .utils import *
+import typing
 from Types.InlineKeyboardMarkup import InlineKeyboardMarkup
 from Types.LabeledPrice import LabeledPrice
 
 class sendInvoice:
     async def send_invoice(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         message_thread_id : int = None,
         title : str = None,
         description : str = None,

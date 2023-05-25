@@ -1,10 +1,11 @@
 from .utils import *
+import typing
 
 
 class createChatInviteLink:
     async def create_chat_invite_link(
         self,
-        chat_id : int | str = None,
+        chat_id : typing.Union[int, str] = None,
         name : str = None,
         expire_date : int = None,
         member_limit : int = None,
