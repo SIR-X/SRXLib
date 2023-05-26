@@ -4,39 +4,48 @@ from Types   import *
 from fastapi import FastAPI, Request
 from orjson  import loads
 
+from types import FunctionType
+from asyncio import gather
+
+
+
+
 class Bot(FastAPI, Methods):
-    def __init__(self, bot_token: str, webhook_url: str):
+    def __init__(
+        self,
+        bot_token: str,
+        webhook_url: str = None
+    ):
         Methods.__init__(self)
         FastAPI.__init__(self)
 
         self.api = f"https://api.telegram.org/bot{bot_token}/"
+        self.webhook_url = webhook_url
 
-        self.delete_webhook()
-        self.set_webhook(webhook_url)
+        self.handlers = dict.fromkeys(Update.__init__.__code__.co_varnames[2:], [])
 
-    def on_update(self, webhook: str = "/webhook"):
-        def decorator(func):
-            @self.post(webhook)
-            async def wrapper(request: Request):
-                update = loads(await request.body())
-                return await func(self, update)
-            return wrapper
-        return decorator
+        self.add_event_handler("startup", self.startup_event)
+        self.router.add_api_route("/webhook", self.handle_update, methods=["POST"])
 
-    def on_callback_query(self):
-        def decorator(func):
-            @self.on_update()
-            async def wrapper(self, update: dict):
-                if "callback_query" in update:
-                    return await func(self, update["callback_query"])
-            return wrapper
-        return decorator
+    async def startup_event(self):
+        if self.webhook_url:
+            await self.delete_webhook()
+            await self.set_webhook(
+                self.webhook_url,
+                allowed_updates=list(self.handlers)
+            )
 
-    def on_message(self):
-        def decorator(func):
-            @self.on_update()
-            async def wrapper(self, update: dict):
-                if "message" in update:
-                    return await func(self, update["message"])
-            return wrapper
-        return decorator
+    async def handle_update(self, request: Request):
+        update : dict = loads(await request.body())
+        update.pop("update_id")
+
+        for key, value in update.items():
+            await gather(func(self, value) for func in self.handlers[key])
+
+    def add_handler(self, handler: str, function: FunctionType):
+        if handler in self.handlers:
+            if function not in self.handlers[handler]:
+                self.handlers[handler].append(function)
+
+        else:
+            raise ValueError(f"Invalid handler: {handler}")
