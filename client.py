@@ -22,7 +22,7 @@ class Bot(FastAPI, Methods):
         self.api = f"https://api.telegram.org/bot{bot_token}/"
         self.webhook_url = webhook_url
 
-        self.handlers = dict.fromkeys(Update.__init__.__code__.co_varnames[2:], [])
+        self.handlers = {update_type: [] for update_type in Update.__init__.__code__.co_varnames[2:]}
 
         self.add_event_handler("startup", self.startup_event)
         self.router.add_api_route("/webhook", self.handle_update, methods=["POST"])
@@ -40,7 +40,12 @@ class Bot(FastAPI, Methods):
         update.pop("update_id")
 
         for key, value in update.items():
-            await gather(func(self, value) for func in self.handlers[key])
+            await gather(
+                *(
+                    func(self, value)
+                    for func in self.handlers[key]
+                )
+            )
 
     def add_handler(self, handler: str, function: FunctionType):
         if handler in self.handlers:
