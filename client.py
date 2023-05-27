@@ -1,25 +1,23 @@
-from Methods import Methods
-from Types   import *
+from Handlers import BaseHandler
+from Methods  import Methods
+from Types    import Update
 
 from fastapi import FastAPI, Request
 from orjson  import loads
-
-from types import FunctionType
 from asyncio import gather
-
-
 
 
 class Bot(FastAPI, Methods):
     def __init__(
         self,
         bot_token: str,
-        webhook_url: str = None
-    ):
+        webhook_url: str = None,
+        api : str = None
+    ) -> None:
         Methods.__init__(self)
         FastAPI.__init__(self)
 
-        self.api = f"https://api.telegram.org/bot{bot_token}/"
+        self.api = (api or "https://api.telegram.org/bot{0}/").format(bot_token)
         self.webhook_url = webhook_url
 
         self.handlers = {update_type: [] for update_type in Update.__init__.__code__.co_varnames[2:]}
@@ -27,7 +25,7 @@ class Bot(FastAPI, Methods):
         self.add_event_handler("startup", self.startup_event)
         self.router.add_api_route("/webhook", self.handle_update, methods=["POST"])
 
-    async def startup_event(self):
+    async def startup_event(self) -> None:
         if self.webhook_url:
             await self.delete_webhook()
             await self.set_webhook(
@@ -35,7 +33,7 @@ class Bot(FastAPI, Methods):
                 allowed_updates=list(self.handlers)
             )
 
-    async def handle_update(self, request: Request):
+    async def handle_update(self, request: Request) -> None:
         update : dict = loads(await request.body())
         update.pop("update_id")
 
@@ -47,10 +45,8 @@ class Bot(FastAPI, Methods):
                 )
             )
 
-    def add_handler(self, handler: str, function: FunctionType):
-        if handler in self.handlers:
-            if function not in self.handlers[handler]:
-                self.handlers[handler].append(function)
+    def add_handler(self, handler: BaseHandler):
+        if handler.func not in self.handlers[handler.name]:
+            self.handlers[handler.name].append(handler.func)
 
-        else:
-            raise ValueError(f"Invalid handler: {handler}")
+        return handler
