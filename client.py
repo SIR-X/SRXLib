@@ -1,4 +1,4 @@
-from Handlers import BaseHandler
+from Handlers import BaseHandler, DHandlers
 from Methods  import Methods
 from Types    import Update
 
@@ -7,7 +7,7 @@ from orjson  import loads
 from asyncio import gather
 
 
-class Bot(FastAPI, Methods):
+class Bot(FastAPI, Methods, DHandlers):
     def __init__(
         self,
         bot_token: str,
@@ -16,11 +16,12 @@ class Bot(FastAPI, Methods):
     ) -> None:
         Methods.__init__(self)
         FastAPI.__init__(self)
+        DHandlers.__init__(self)
 
         self.api = (api or "https://api.telegram.org/bot{0}/").format(bot_token)
         self.webhook_url = webhook_url
 
-        self.handlers = {update_type: [] for update_type in Update.__init__.__code__.co_varnames[2:]}
+        self.handlers = {update_type: set() for update_type in Update.__init__.__code__.co_varnames[2:]}
 
         self.add_event_handler("startup", self.startup_event)
         self.router.add_api_route("/webhook", self.handle_update, methods=["POST"])
@@ -46,7 +47,5 @@ class Bot(FastAPI, Methods):
             )
 
     def add_handler(self, handler: BaseHandler):
-        if handler.func not in self.handlers[handler.name]:
-            self.handlers[handler.name].append(handler.func)
-
+        self.handlers[handler.name].add(handler.func)
         return handler
