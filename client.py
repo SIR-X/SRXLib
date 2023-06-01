@@ -41,11 +41,12 @@ class Bot(FastAPI, Methods, DHandlers):
         for key, value in update.items():
             await gather(
                 *(
-                    func(self, value)
+                    func.func(self, value)
                     for func in self.handlers[key]
+                    if func.filters(self, value)
                 )
             )
 
     def add_handler(self, handler: BaseHandler):
-        self.handlers[handler.name].add(handler.func)
+        self.handlers[handler.name].add(handler)
         return handler
